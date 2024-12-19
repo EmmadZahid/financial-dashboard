@@ -1,9 +1,9 @@
 import styles from "./Header.module.scss";
-import ProfileImg from "../atoms/ProfileImg/ProfileImg";
-import BellIcon from "../../icons/BellIcon";
-import MenuBarIcon from "../../icons/MenuBarIcon";
-import SettingsIcon from "../../icons/SettingsIcon";
-import SearchBar from "../molecules/SearchBar/SearchBar";
+import ProfileImg from "../../atoms/ProfileImg/ProfileImg";
+import BellIcon from "../../../icons/BellIcon";
+import MenuBarIcon from "../../../icons/MenuBarIcon";
+import SettingsIcon from "../../../icons/SettingsIcon";
+import SearchBar from "../SearchBar/SearchBar";
 import { useState } from "react";
 const Header = () => {
   const [searchText, setSearchText] = useState("");
@@ -14,7 +14,7 @@ const Header = () => {
       >
         <MenuBarIcon className={"lg:hidden cursor-pointer"}></MenuBarIcon>
         <div>
-          <h2 className="font-inter text-blue text-2xl lg:text-3xl font-bold">
+          <h2 className="heading-text text-2xl lg:text-3xl font-bold">
             Overview
           </h2>
         </div>

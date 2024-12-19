@@ -17,12 +17,16 @@ export default {
         8: "8px",
       },
       fontSize: {
+        xl: "1.375rem",
         "3xl": "1.750rem",
       },
       colors: {
         black: "#0d0f52",
+        warn: "#FF4B4A",
+        success: "#41D4A8",
         gray: {
           DEFAULT: "#F5F7FA",
+          600: "#718EBF",
           800: "#8BA3CB",
           700: "#8687a8",
         },

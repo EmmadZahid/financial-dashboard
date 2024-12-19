@@ -11,8 +11,18 @@ body {
   html {
     font-family: "Lato";
   }
+  body {
+    color: #232323;
+  }
 }
 
+.heading-text {
+  @apply text-blue font-inter;
+}
+
+.dim-text {
+  @apply text-gray-600;
+}
 @media (min-width: 1024px) {
   body {
     font-size: 16px;
