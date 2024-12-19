@@ -30,10 +30,10 @@ const RecentTransactionItem = ({ transaction }) => {
           <div className="dim-text text-sm">21 January 2021</div>
         </div>
         <div className="text-xs lg:text-base">
-          {transaction.amount.includes("-") ? (
-            <span className="text-warn">{transaction.amount}</span>
+          {transaction.amount < 0 ? (
+            <span className="text-warn">-${transaction.amount * -1}</span>
           ) : (
-            <span className="text-success">{transaction.amount}</span>
+            <span className="text-success">${transaction.amount}</span>
           )}
         </div>
       </div>

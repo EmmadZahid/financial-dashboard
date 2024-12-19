@@ -9,4 +9,9 @@ export default defineConfig({
       plugins: [tailwindcss()],
     },
   },
+  resolve: {
+    alias: {
+      "msw/node": "msw/lib/node/index.js",
+    },
+  },
 });
