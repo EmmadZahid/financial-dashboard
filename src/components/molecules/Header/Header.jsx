@@ -5,8 +5,20 @@ import MenuBarIcon from "../../../icons/MenuBarIcon";
 import SettingsIcon from "../../../icons/SettingsIcon";
 import SearchBar from "../SearchBar/SearchBar";
 import { useState } from "react";
+import { useLocation } from "react-router-dom";
 const Header = () => {
   const [searchText, setSearchText] = useState("");
+  const location = useLocation();
+
+  // Map routes to titles
+  const routeTitles = {
+    "/": "Overview",
+    "/dashboard": "Overview",
+    "/credit-cards": "Credit Cards",
+  };
+
+  const title = routeTitles[location.pathname];
+
   return (
     <>
       <div
@@ -15,7 +27,7 @@ const Header = () => {
         <MenuBarIcon className={"lg:hidden cursor-pointer"}></MenuBarIcon>
         <div>
           <h2 className="heading-text text-2xl lg:text-3xl font-bold">
-            Overview
+            {title}
           </h2>
         </div>
 

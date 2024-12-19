@@ -1,6 +1,7 @@
 import { Navigate, createBrowserRouter } from "react-router-dom";
 import MainPage from "./components/pages/main";
 import Dashboard from "./components/templates/Dashboard";
+import CreditCards from "./components/templates/CreditCards";
 
 const routes = [
   {
@@ -9,16 +10,16 @@ const routes = [
     children: [
       {
         index: true,
-        path: "overview",
+        path: "dashboard",
         element: <Dashboard />,
       },
       {
-        path: "settinga",
-        // element: <InvestPage />,
+        path: "credit-cards",
+        element: <CreditCards />,
       },
       {
         path: "*",
-        element: <Navigate to="/overview" />,
+        element: <Navigate to="/dashboard" />,
       },
     ],
   },

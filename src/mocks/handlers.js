@@ -49,6 +49,22 @@ export const handlers = [
         name: "Eddy Bob",
         validity: "10/23",
       },
+      {
+        id: 4,
+        type: "platinum",
+        amount: "3,000",
+        cardNo: "1234567812345678",
+        name: "Eddy Bob",
+        validity: "10/23",
+      },
+      {
+        id: 5,
+        type: "basic",
+        amount: "3,000",
+        cardNo: "1234567812345678",
+        name: "Eddy Bob",
+        validity: "10/23",
+      },
     ]);
   }),
 ];
