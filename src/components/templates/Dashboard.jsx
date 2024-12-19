@@ -1,14 +1,15 @@
+import { useState } from "react";
+import CreditCard from "../molecules/CreditCard/CreditCard";
 import RecentTransactionWidget from "../molecules/RecentTransactionWidget/RecentTransactionWidget";
+import CreditCardWidget from "../organisms/CreditCardWidget/CreditCardWidget";
 
 const Dashboard = () => {
+  const [creditCards, setCreditCards] = useState([]);
   return (
     <>
       <div className="flex flex-col lg:flex-row gap-[22px] lg:gap-[30px]">
-        <div className="flex flex-col w-[730px] ">
-          <div className="flex justify-between items-center">
-            <div className="heading-text text-lg lg:text-xl">My Cards</div>
-            <div className="heading-text">See All</div>
-          </div>
+        <div className="flex flex-col lg:w-[730px] gap-[22px] lg:gap-[20px]">
+          <CreditCardWidget></CreditCardWidget>
         </div>
         <div className="flex flex-col flex-1 gap-[20px]">
           <RecentTransactionWidget></RecentTransactionWidget>
