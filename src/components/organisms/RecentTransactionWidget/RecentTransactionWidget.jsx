@@ -17,8 +17,8 @@ const RecentTransactionWidget = () => {
         <div className="heading-text text-lg lg:text-xl">
           Recent Transaction
         </div>
-        <div className="bg-white rounded-[25px] p-[18px] lg:p-[25px] flex flex-col gap-[12px] lg:gap-[10px]">
-          {recentTransactions.slice(0, 3).map((t) => (
+        <div className="bg-white rounded-[25px] p-[18px] lg:p-[25px] flex flex-col gap-[12px] lg:gap-[10px] h-full overflow-y-auto h-[235px] scroll-smooth">
+          {recentTransactions.map((t) => (
             <RecentTransactionItem
               key={t.id}
               transaction={t}

@@ -22,7 +22,7 @@ const CreditCardWidget = () => {
           </div>
         </div>
         <div className="flex gap-[20px] lg:gap-[30px] overflow-x-auto">
-          {cards.slice(0, 2).map((c) => (
+          {cards.map((c) => (
             <CreditCard key={c.id} card={c}></CreditCard>
           ))}
         </div>
