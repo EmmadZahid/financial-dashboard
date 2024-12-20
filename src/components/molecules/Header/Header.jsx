@@ -26,9 +26,7 @@ const Header = () => {
       >
         <MenuBarIcon className={"lg:hidden cursor-pointer"}></MenuBarIcon>
         <div>
-          <h2 className="heading-text text-2xl lg:text-3xl font-bold">
-            {title}
-          </h2>
+          <h2 className="heading-text text-2xl lg:text-3xl">{title}</h2>
         </div>
 
         <div className="space-x-9 flex flex-row items-center ">

@@ -7,7 +7,7 @@ import styles from "./styles.module.scss";
 const CreditCard = ({ card }) => {
   const classes = clsx({
     [styles.dark]: card.type == "platinum",
-    border: card.type !== "platinum",
+    "border-[#dfeaf2] border": card.type !== "platinum",
     "bg-white": card.type !== "platinum",
   });
 
