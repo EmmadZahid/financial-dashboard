@@ -43,14 +43,16 @@ const QuickTransferWidget = () => {
               />
               <Button
                 onClick={() => {
-                  dispatch(
-                    addTransaction({
-                      id: Math.random(),
-                      type: "paypal",
-                      amount: "-" + transferAmount,
-                    })
-                  );
-                  setTransferAmount("");
+                  if (transferAmount) {
+                    dispatch(
+                      addTransaction({
+                        id: Math.random(),
+                        type: "paypal",
+                        amount: "-" + transferAmount,
+                      })
+                    );
+                    setTransferAmount("");
+                  }
                 }}
                 className={
                   "px-[21px] py[21px] lg:px-[24px] lg:py-[14px] h-full lg:w-[125px] w-[100px] rounded-[50px]"
