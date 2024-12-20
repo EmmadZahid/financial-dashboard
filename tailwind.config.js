@@ -21,7 +21,9 @@ export default {
         "3xl": "1.750rem",
       },
       colors: {
-        black: "#0d0f52",
+        black: {
+          DEFAULT: "#232323",
+        },
         warn: "#FF4B4A",
         success: "#41D4A8",
         gray: {

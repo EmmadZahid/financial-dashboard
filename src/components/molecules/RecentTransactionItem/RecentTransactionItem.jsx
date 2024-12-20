@@ -26,7 +26,14 @@ const RecentTransactionItem = ({ transaction }) => {
           )}
         </div>
         <div className="flex-1 ml-[15px] lg:ml-[17px] flex flex-col font-inter">
-          <div>Deposit from my card</div>
+          <div>
+            {transaction.amount > 0 ? (
+              <span>Deposit</span>
+            ) : (
+              <span>Transfer</span>
+            )}{" "}
+            from my card
+          </div>
           <div className="dim-text text-sm">21 January 2021</div>
         </div>
         <div className="text-xs lg:text-base">

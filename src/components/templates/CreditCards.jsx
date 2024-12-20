@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react";
 import CreditCard from "../molecules/CreditCard/CreditCard";
-import RecentTransactionWidget from "../molecules/RecentTransactionWidget/RecentTransactionWidget";
-import CreditCardWidget from "../organisms/CreditCardWidget/CreditCardWidget";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchCards } from "../../store/creditCardSlice";
 

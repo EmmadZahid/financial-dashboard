@@ -67,4 +67,39 @@ export const handlers = [
       },
     ]);
   }),
+  http.get("/users", () => {
+    // ...and respond to them using this JSON response.
+    return HttpResponse.json([
+      {
+        id: 1,
+        name: "John Cena",
+        role: "CEO",
+        imageUrl: "src/assets/user1.jpg",
+      },
+      {
+        id: 2,
+        name: "Michel John",
+        role: "Designer",
+        imageUrl: "src/assets/user2.jpg",
+      },
+      {
+        id: 3,
+        name: "Livia Bator",
+        role: "Engineer",
+        imageUrl: "src/assets/user3.jpg",
+      },
+      {
+        id: 4,
+        name: "Eddy Bob",
+        role: "Director",
+        imageUrl: "src/assets/user4.jpg",
+      },
+      {
+        id: 5,
+        name: "Sofie Jim",
+        role: "CTO",
+        imageUrl: "src/assets/user5.jpg",
+      },
+    ]);
+  }),
 ];

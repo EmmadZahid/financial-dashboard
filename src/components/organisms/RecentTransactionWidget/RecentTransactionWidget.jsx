@@ -1,15 +1,16 @@
 import { useEffect, useState } from "react";
-import RecentTransactionItem from "../RecentTransactionItem/RecentTransactionItem";
+import RecentTransactionItem from "../../molecules/RecentTransactionItem/RecentTransactionItem";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchRecentTransactions } from "../../../store/recentTransactionsSlice";
 
 const RecentTransactionWidget = () => {
-  const [transations, setTransactions] = useState([]);
+  const dispatch = useDispatch();
+  const { recentTransactions, isFetched } = useSelector(
+    (state) => state.recentTransactions
+  );
   useEffect(() => {
-    fetch("/recentTransactions")
-      .then((res) => {
-        return res.json();
-      })
-      .then((data) => setTransactions(data));
-  }, []);
+    if (!isFetched) dispatch(fetchRecentTransactions());
+  }, [dispatch]);
   return (
     <>
       <div className="flex flex-col gap-[22px] lg:gap-[20px]">
@@ -17,7 +18,7 @@ const RecentTransactionWidget = () => {
           Recent Transaction
         </div>
         <div className="bg-white rounded-[25px] p-[18px] lg:p-[25px] flex flex-col gap-[12px] lg:gap-[10px]">
-          {transations.map((t) => (
+          {recentTransactions.slice(0, 3).map((t) => (
             <RecentTransactionItem
               key={t.id}
               transaction={t}
