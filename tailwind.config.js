@@ -34,7 +34,7 @@ export default {
           DEFAULT: "#80CB17",
         },
         blue: {
-          DEFAULT: "#343C6A",
+          800: "#343C6A",
         },
       },
     },

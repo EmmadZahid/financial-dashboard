@@ -17,7 +17,7 @@ const CreditCardWidget = () => {
       <div className="flex flex-col gap-[22px] lg:gap-[20px]">
         <div className="flex justify-between items-center">
           <div className="heading-text text-lg lg:text-xl">My Cards</div>
-          <div className="heading-text">
+          <div className="heading-text hover:opacity-70">
             <Link to={"/credit-cards"}>See All</Link>
           </div>
         </div>
