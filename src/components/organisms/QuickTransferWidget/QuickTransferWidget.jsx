@@ -21,7 +21,7 @@ const QuickTransferWidget = () => {
     <>
       <div className="flex flex-col gap-[22px] lg:gap-[20px]">
         <div className="heading-text text-lg lg:text-xl">Quick Transfer</div>
-        <div className="bg-white rounded-[25px] px-[18px] py-[20px] lg:px-[25px] lg:py-[35px] flex flex-col gap-[12px] lg:gap-[10px]">
+        <div className="bg-white rounded-[25px] px-[18px] py-[20px] lg:px-[25px] lg:py-[35px] flex flex-col gap-[22px] lg:gap-[29px]">
           <UsersScrollableList
             users={users}
             onSelection={(user) => setSelectedUser(user)}
