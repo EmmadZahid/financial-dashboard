@@ -2,6 +2,7 @@ import BalanceHistoryWidget from "../organisms/BalanceHistoryWidget/BalanceHisto
 import CreditCardWidget from "../organisms/CreditCardWidget/CreditCardWidget";
 import QuickTransferWidget from "../organisms/QuickTransferWidget/QuickTransferWidget";
 import RecentTransactionWidget from "../organisms/RecentTransactionWidget/RecentTransactionWidget";
+import WeeklyActivityWidget from "../organisms/WeeklyActivityWidget/WeeklyActivityWidget";
 
 const Dashboard = () => {
   return (
@@ -13,6 +14,11 @@ const Dashboard = () => {
           </div>
           <div className="flex-1">
             <RecentTransactionWidget></RecentTransactionWidget>
+          </div>
+        </div>
+        <div className="flex flex-col lg:flex-row gap-[22px] lg:gap-[30px]">
+          <div className="lg:w-[730px]">
+            <WeeklyActivityWidget></WeeklyActivityWidget>
           </div>
         </div>
         <div className="flex flex-col lg:flex-row gap-[22px] lg:gap-[30px]">
