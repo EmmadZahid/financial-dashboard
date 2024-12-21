@@ -1,5 +1,6 @@
 import BalanceHistoryWidget from "../organisms/BalanceHistoryWidget/BalanceHistoryWidget";
 import CreditCardWidget from "../organisms/CreditCardWidget/CreditCardWidget";
+import ExpenseWidget from "../organisms/ExpenseWidget/ExpenseWidget";
 import QuickTransferWidget from "../organisms/QuickTransferWidget/QuickTransferWidget";
 import RecentTransactionWidget from "../organisms/RecentTransactionWidget/RecentTransactionWidget";
 import WeeklyActivityWidget from "../organisms/WeeklyActivityWidget/WeeklyActivityWidget";
@@ -19,6 +20,9 @@ const Dashboard = () => {
         <div className="flex flex-col lg:flex-row gap-[22px] lg:gap-[30px]">
           <div className="lg:w-[730px]">
             <WeeklyActivityWidget></WeeklyActivityWidget>
+          </div>
+          <div className="lg:w-[350px]">
+            <ExpenseWidget></ExpenseWidget>
           </div>
         </div>
         <div className="flex flex-col lg:flex-row gap-[22px] lg:gap-[30px]">
