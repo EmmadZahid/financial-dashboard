@@ -8,7 +8,7 @@ const UserShortProfile = ({ user, selected }) => {
   return (
     <>
       <div
-        className={`${classes} flex flex-col items-center justify-center w-[100px] lg:max-w-[100px] font-inter text-center`}
+        className={`${classes} flex flex-col items-center justify-center w-[70px] lg:max-w-[100px] font-inter text-center`}
       >
         <img
           className="rounded-full w-[50px] lg:w-[70px] mb-[12px] lg:mb-[15px]"

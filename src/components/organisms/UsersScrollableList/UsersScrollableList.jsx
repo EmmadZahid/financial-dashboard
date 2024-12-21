@@ -21,7 +21,7 @@ const UsersScrollableList = ({ users, onSelection }) => {
     <div className="flex flex-row justify-between items-center">
       {startIndex > 0 ? (
         <div
-          className="rounded-full w-[40px] h-[40px] lg:w-[50px] lg:h-[50px] bg-white drop-shadow-xl flex items-center justify-center cursor-pointer hover:opacity-70 active:opacity-100 active:outline active:outline-gray"
+          className="rounded-full min-w-[40px] w-[40px] min-h-[40px] h-[40px] lg:w-[50px] lg:h-[50px] bg-white drop-shadow-xl flex items-center justify-center cursor-pointer hover:opacity-70 active:opacity-100 active:outline active:outline-gray"
           onClick={() => onNavClick(false)}
         >
           <ArrowIcon className={"rotate-180"}></ArrowIcon>
@@ -52,7 +52,7 @@ const UsersScrollableList = ({ users, onSelection }) => {
       ))}
       {startIndex + 3 < users.length ? (
         <div
-          className="rounded-full w-[40px] h-[40px] lg:w-[50px] lg:h-[50px] bg-white drop-shadow-xl flex items-center justify-center cursor-pointer hover:opacity-70 active:opacity-100 active:outline active:outline-gray"
+          className="rounded-full min-w-[40px] w-[40px] min-h-[40px] h-[40px] lg:w-[50px] lg:h-[50px] bg-white drop-shadow-xl flex items-center justify-center cursor-pointer hover:opacity-70 active:opacity-100 active:outline active:outline-gray"
           onClick={() => onNavClick(true)}
         >
           <ArrowIcon></ArrowIcon>

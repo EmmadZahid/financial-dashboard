@@ -8,7 +8,7 @@ import WeeklyActivityWidget from "../organisms/WeeklyActivityWidget/WeeklyActivi
 const Dashboard = () => {
   return (
     <>
-      <div className="flex flex-col gap-[24px]">
+      <div className="flex flex-col gap-[24px] pb-10">
         <div className="flex flex-col lg:flex-row gap-[22px] lg:gap-[30px]">
           <div className="lg:w-[730px] ">
             <CreditCardWidget></CreditCardWidget>
