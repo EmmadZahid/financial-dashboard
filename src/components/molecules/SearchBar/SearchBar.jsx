@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import SearchIcon from "../../../icons/SearchIcon";
+import { ReactComponent as SearchIcon } from "../../../assets/icons/search.svg";
 
 const SearchBar = ({ searchText, onTextChange, size = "lg" }) => {
   const classes = clsx({

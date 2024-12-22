@@ -1,8 +1,7 @@
 import clsx from "clsx";
-import CardTransationIcon from "../../../icons/CardTransationIcon";
-import PaypalIcon from "../../../icons/PaypalIcon";
-import MoneyIcon from "../../../icons/MoneyIcon";
-
+import { ReactComponent as CardTransationIcon } from "../../../assets/icons/card-transaction.svg";
+import { ReactComponent as PaypalIcon } from "../../../assets/icons/paypal.svg";
+import { ReactComponent as MoneyIcon } from "../../../assets/icons/dollar.svg";
 const RecentTransactionItem = ({ transaction }) => {
   const classes = clsx({
     "bg-[#FFF5D9]": transaction.type == "card",

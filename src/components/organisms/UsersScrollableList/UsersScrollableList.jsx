@@ -1,5 +1,6 @@
 import { useState } from "react";
-import ArrowIcon from "../../../icons/ArrowIcon";
+
+import { ReactComponent as ArrowIcon } from "../../../assets/icons/arrow.svg";
 import UserShortProfile from "../../molecules/UserShortProfile/UserShortProfile";
 
 const UsersScrollableList = ({ users, onSelection }) => {

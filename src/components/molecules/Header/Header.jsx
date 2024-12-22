@@ -1,12 +1,12 @@
 import styles from "./Header.module.scss";
 import ProfileImg from "../../atoms/ProfileImg/ProfileImg";
-import BellIcon from "../../../icons/BellIcon";
-import MenuBarIcon from "../../../icons/MenuBarIcon";
-import SettingsIcon from "../../../icons/SettingsIcon";
+import { ReactComponent as BellIcon } from "../../../assets/icons/notification.svg";
+import { ReactComponent as MenuBarIcon } from "../../../assets/icons/menu.svg";
+import { ReactComponent as SettingsIcon } from "../../../assets/icons/settings.svg";
 import SearchBar from "../SearchBar/SearchBar";
 import { useState } from "react";
 import { useLocation } from "react-router-dom";
-const Header = () => {
+const Header = ({ onMenuClick }) => {
   const [searchText, setSearchText] = useState("");
   const location = useLocation();
 
@@ -24,7 +24,9 @@ const Header = () => {
       <div
         className={`h-[35px] lg:h-[101px] mt-7 lg:mt-0 px-[25px] lg:px-10 lg:border-b border-gray flex flex-row items-center justify-between`}
       >
-        <MenuBarIcon className={"lg:hidden cursor-pointer"}></MenuBarIcon>
+        <div className={"lg:hidden cursor-pointer"} onClick={onMenuClick}>
+          <MenuBarIcon></MenuBarIcon>
+        </div>
         <div>
           <h2 className="heading-text text-2xl lg:text-3xl">{title}</h2>
         </div>

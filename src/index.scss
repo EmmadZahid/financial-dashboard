@@ -21,7 +21,7 @@ body {
 }
 
 .dim-text {
-  @apply text-gray-600;
+  @apply text-dim;
 }
 @media (min-width: 1024px) {
   html {

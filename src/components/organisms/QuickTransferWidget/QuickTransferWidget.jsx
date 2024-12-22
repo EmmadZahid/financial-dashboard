@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchUsers } from "../../../store/usersSlice";
 import Button from "../../atoms/Button/Button";
-import SendIcon from "../../../icons/SendIcon";
+import { ReactComponent as SendIcon } from "../../../assets/icons/send.svg";
 import UsersScrollableList from "../UsersScrollableList/UsersScrollableList";
 import { addTransaction } from "../../../store/recentTransactionsSlice";
 import clsx from "clsx";
@@ -60,7 +60,9 @@ const QuickTransferWidget = () => {
               >
                 <div className="text-sm font-medium lg:text-base flex justify-between items-center">
                   <span>Send</span>
-                  <SendIcon className={"w-[16px] lg:w-[26px]"}></SendIcon>
+                  <div className={"w-[16px] lg:w-[26px]"}>
+                    <SendIcon></SendIcon>
+                  </div>
                 </div>
               </Button>
             </div>

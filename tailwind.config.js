@@ -26,9 +26,12 @@ export default {
         },
         warn: "#FF4B4A",
         success: "#41D4A8",
+        dim: {
+          DEFAULT: "#718EBF",
+        },
         gray: {
           DEFAULT: "#F5F7FA",
-          600: "#718EBF",
+          500: "#B1B1B1",
           800: "#8BA3CB",
           700: "#8687a8",
         },
