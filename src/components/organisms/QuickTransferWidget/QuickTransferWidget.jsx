@@ -5,6 +5,7 @@ import Button from "../../atoms/Button/Button";
 import { ReactComponent as SendIcon } from "../../../assets/icons/send.svg";
 import UsersScrollableList from "../UsersScrollableList/UsersScrollableList";
 import { addTransaction } from "../../../store/recentTransactionsSlice";
+import sendSrc from "../../../assets/icons/send.png";
 import clsx from "clsx";
 const QuickTransferWidget = () => {
   const [selectedUser, setSelectedUser] = useState(null);
@@ -60,7 +61,11 @@ const QuickTransferWidget = () => {
               >
                 <div className="text-sm font-medium lg:text-base flex justify-between items-center">
                   <span>Send</span>
-                  <SendIcon className={"w-[16px] lg:w-[26px]"}></SendIcon>
+                  <img
+                    className={"w-[16px] lg:w-[26px]"}
+                    src={sendSrc}
+                    alt=""
+                  />
                 </div>
               </Button>
             </div>

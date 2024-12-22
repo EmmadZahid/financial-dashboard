@@ -1,6 +1,6 @@
 import clsx from "clsx";
-import { ReactComponent as ChipDark } from "../../../assets/icons/chip-white.svg";
-import { ReactComponent as Chip } from "../../../assets/icons/chip-dark.svg";
+import chipDarkSrc from "../../../assets/icons/chip-white.png";
+import chipSrc from "../../../assets/icons/chip-dark.png";
 import visaCard from "../../../assets/visa_card.png";
 import visaCardDark from "../../../assets/visa_card_dark.png";
 import styles from "./styles.module.scss";
@@ -45,9 +45,17 @@ const CreditCard = ({ card }) => {
               </div>
             </div>
             {card.type == "platinum" ? (
-              <Chip className="grow-0 w-[29px] lg:w-[34px] h-[29px] lg:h-[34px]" />
+              <img
+                className="grow-0 w-[29px] lg:w-[34px] h-[29px] lg:h-[34px]"
+                src={chipDarkSrc}
+                alt=""
+              />
             ) : (
-              <ChipDark className="grow-0 w-[29px] lg:w-[34px] h-[29px] lg:h-[34px]" />
+              <img
+                className="grow-0 w-[29px] lg:w-[34px] h-[29px] lg:h-[34px]"
+                src={chipSrc}
+                alt=""
+              />
             )}
           </div>
           <div className="mt-[12px] lg:mt-[33px] w-[193px] lg:w-[227px] flex justify-between">
