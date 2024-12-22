@@ -60,9 +60,7 @@ const QuickTransferWidget = () => {
               >
                 <div className="text-sm font-medium lg:text-base flex justify-between items-center">
                   <span>Send</span>
-                  <div className={"w-[16px] lg:w-[26px]"}>
-                    <SendIcon></SendIcon>
-                  </div>
+                  <SendIcon className={"w-[16px] lg:w-[26px]"}></SendIcon>
                 </div>
               </Button>
             </div>
