@@ -33,6 +33,7 @@ const UsersScrollableList = ({ users, onSelection }) => {
 
       {users.slice(startIndex, startIndex + 3).map((u) => (
         <div
+          key={u.id}
           className={"cursor-pointer"}
           onClick={() => {
             if (selectedUser?.id == u.id) {
