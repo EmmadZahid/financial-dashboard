@@ -5,6 +5,7 @@ import { RouterProvider } from "react-router-dom";
 import { router } from "./router";
 import { Provider } from "react-redux";
 import store from "./store/store";
+import { ToastProvider } from "./context/ToastProvider";
 
 const { worker } = await import("./mocks/browser");
 async function enableMocking() {
@@ -19,7 +20,9 @@ enableMocking().then(() => {
   createRoot(document.getElementById("root")).render(
     <StrictMode>
       <Provider store={store}>
-        <RouterProvider router={router}></RouterProvider>
+        <ToastProvider>
+          <RouterProvider router={router}></RouterProvider>
+        </ToastProvider>
       </Provider>
     </StrictMode>
   );

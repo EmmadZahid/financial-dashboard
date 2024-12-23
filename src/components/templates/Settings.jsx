@@ -8,8 +8,10 @@ import "./overrides.scss";
 import ProfileImg from "../atoms/ProfileImg/ProfileImg";
 import { Col, Form } from "react-bootstrap";
 import Button from "../atoms/Button/Button";
+import { useToast } from "../../context/ToastProvider";
 const Settings = () => {
   const dispatch = useDispatch();
+  const { showToast } = useToast();
 
   const { currentUser } = useSelector((state) => state.currentUser);
   const [name, setName] = useState("");
@@ -46,6 +48,7 @@ const Settings = () => {
           country,
         })
       );
+      showToast("Profile updated!");
     }
     setValidated(true);
   };

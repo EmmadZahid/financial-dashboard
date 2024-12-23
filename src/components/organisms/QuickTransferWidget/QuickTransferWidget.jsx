@@ -7,9 +7,11 @@ import UsersScrollableList from "../UsersScrollableList/UsersScrollableList";
 import { addTransaction } from "../../../store/recentTransactionsSlice";
 import sendSrc from "../../../assets/icons/send.png";
 import clsx from "clsx";
+import { useToast } from "../../../context/ToastProvider";
 const QuickTransferWidget = () => {
   const [selectedUser, setSelectedUser] = useState(null);
   const [transferAmount, setTransferAmount] = useState("");
+  const { showToast } = useToast();
   const dispatch = useDispatch();
   const { users } = useSelector((state) => state.users);
   const disabledClass = clsx({
@@ -43,6 +45,7 @@ const QuickTransferWidget = () => {
                 placeholder="Amount"
               />
               <Button
+                disabled={selectedUser ? false : true}
                 onClick={() => {
                   if (transferAmount) {
                     dispatch(
@@ -53,6 +56,7 @@ const QuickTransferWidget = () => {
                       })
                     );
                     setTransferAmount("");
+                    showToast("Transaction Successful!");
                   }
                 }}
                 className={
