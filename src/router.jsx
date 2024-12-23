@@ -10,7 +10,10 @@ const routes = [
     element: <MainPage />,
     children: [
       {
-        index: true,
+        index: true, // This will automatically load Dashboard when the path is "/"
+        element: <Navigate to="/dashboard" />, // Redirect to dashboard
+      },
+      {
         path: "dashboard",
         element: <Dashboard />,
       },
@@ -24,7 +27,7 @@ const routes = [
       },
       {
         path: "*",
-        element: <Navigate to="/dashboard" />,
+        element: <Navigate to="/dashboard" />, // Redirect all unknown paths to dashboard
       },
     ],
   },
