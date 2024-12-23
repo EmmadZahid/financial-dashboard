@@ -35,12 +35,17 @@ const QuickTransferWidget = () => {
             </div>
             <div className="rounded-[50px] bg-gray h-[40px] lg:h-[50px] flex-1 flex items-center pl-[15px] lg:pl-[30px] justify-between">
               <input
-                maxLength={4}
-                disabled={selectedUser ? false : true}
+                maxLength={4} // Ensure max length is 4 digits
+                disabled={!selectedUser} // Simplified conditional for readability
                 value={transferAmount}
-                onChange={(e) => setTransferAmount(e.target.value)}
+                onChange={(e) => {
+                  // Only allow digits (use regex to replace non-digit characters)
+                  const value = e.target.value.replace(/[^0-9]/g, "");
+                  setTransferAmount(value);
+                }}
                 className={`font-inter text-gray-800 border-0 text-base bg-gray outline-0 flex placeholder:text-gray-800 w-[60px] ${disabledClass}`}
-                type="text"
+                type="tel" // Use type="tel" for numeric input
+                inputMode="numeric" // Suggests numeric input for mobile devices
                 placeholder="Amount"
               />
               <Button
