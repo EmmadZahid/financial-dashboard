@@ -6,6 +6,15 @@ export const handlers = [
     return HttpResponse.json({
       id: 1,
       name: "John Cena",
+      username: "john.cena",
+      email: "john@email.com",
+      password: "test",
+      dob: "19/10/90",
+      presentAddress: "House 123",
+      permanentAddress: "House 234",
+      city: "Newyork",
+      postal: "40120",
+      country: "Canada",
       role: "CEO",
       imageUrl: "src/assets/current_user.jpg",
     });

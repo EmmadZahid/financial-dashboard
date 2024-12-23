@@ -1,10 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-body {
-}
-
+@import "bootstrap/scss/bootstrap.scss";
 @layer base {
   html {
     font-family: "Lato";
@@ -22,6 +19,14 @@ body {
 
 .dim-text {
   @apply text-dim;
+}
+a {
+  text-decoration: none !important;
+}
+
+:root {
+  --bs-link-color-rgb: #232323;
+  --bs-link-hover-color-rgb: #232323;
 }
 @media (min-width: 1024px) {
   html {

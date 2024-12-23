@@ -44,7 +44,7 @@ const Header = ({ onMenuClick }) => {
           <div className="bg-gray items-center rounded-full w-[50px] h-[50px] justify-center hidden lg:flex">
             <BellIcon></BellIcon>
           </div>
-          <ProfileImg></ProfileImg>
+          <ProfileImg className="w-[35px] h-[35px] lg:w-[60px] lg:h-[60px]"></ProfileImg>
         </div>
       </div>
       <div className="block px-[25px] lg:hidden mt-6 mb-6">

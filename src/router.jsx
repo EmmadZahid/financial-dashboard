@@ -2,6 +2,7 @@ import { Navigate, createBrowserRouter } from "react-router-dom";
 import MainPage from "./components/pages/main";
 import Dashboard from "./components/templates/Dashboard";
 import CreditCards from "./components/templates/CreditCards";
+import Settings from "./components/templates/Settings";
 
 const routes = [
   {
@@ -16,6 +17,10 @@ const routes = [
       {
         path: "credit-cards",
         element: <CreditCards />,
+      },
+      {
+        path: "settings",
+        element: <Settings />,
       },
       {
         path: "*",

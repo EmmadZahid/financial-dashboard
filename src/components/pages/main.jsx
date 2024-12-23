@@ -1,6 +1,6 @@
 import { Link, NavLink, Outlet, useLocation } from "react-router-dom";
 import Header from "../molecules/Header/Header";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ReactComponent as Logo } from "../../assets/icons/logo.svg";
 import clsx from "clsx";
 import { ReactComponent as HomeIcon } from "../../assets/icons/sidebar/home.svg";
@@ -12,9 +12,15 @@ import { ReactComponent as LoanIcon } from "../../assets/icons/sidebar/loan.svg"
 import { ReactComponent as ServiceIcon } from "../../assets/icons/sidebar/service.svg";
 import { ReactComponent as PrevilegeIcon } from "../../assets/icons/sidebar/previlege.svg";
 import { ReactComponent as SettingsIcon } from "../../assets/icons/sidebar/settings.svg";
+import { useDispatch } from "react-redux";
+import { fetchCurrentUser } from "../../store/currentUserSlice";
 
 const MainPage = () => {
   const location = useLocation();
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchCurrentUser());
+  }, [dispatch]);
 
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const sidebarClasses = clsx({
@@ -59,7 +65,7 @@ const MainPage = () => {
               key={item.path}
               to={item.path}
               className={({ isActive }) =>
-                `flex items-center hover:bg-gray-100 active:bg-gray-200 py-[20px] pl-[41px] ${
+                `flex items-center hover:bg-gray-100 active:bg-gray-200 py-[20px] pl-[41px] no-underline ${
                   isActive ? "text-black" : "text-gray-500"
                 }`
               }

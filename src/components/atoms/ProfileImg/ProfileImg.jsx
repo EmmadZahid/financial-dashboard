@@ -1,18 +1,17 @@
-import { useDispatch, useSelector } from "react-redux";
-import { fetchCurrentUser } from "../../../store/currentUserSlice";
-import { useEffect } from "react";
+import { useSelector } from "react-redux";
 
-const ProfileImg = () => {
-  const dispatch = useDispatch();
+const ProfileImg = ({ className }) => {
   const { currentUser } = useSelector((state) => state.currentUser);
-  useEffect(() => {
-    dispatch(fetchCurrentUser());
-  }, [dispatch]);
-
   return (
     <>
-      <div className="w-[35px] h-[35px] lg:w-[60px] lg:h-[60px] rounded-full bg-gray shrink-0">
-        {currentUser ? <img src={currentUser.imageUrl} alt="" /> : ""}
+      <div
+        className={`${className} rounded-full overflow-hidden bg-gray shrink-0`}
+      >
+        {currentUser ? (
+          <img className={className} src={currentUser.imageUrl} alt="" />
+        ) : (
+          ""
+        )}
       </div>
     </>
   );
