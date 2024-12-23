@@ -137,7 +137,7 @@ const Settings = () => {
                           value={email}
                         />
                         <Form.Control.Feedback type="invalid">
-                          Please enter email
+                          Please valid enter email
                         </Form.Control.Feedback>
                       </Form.Group>
                     </div>
