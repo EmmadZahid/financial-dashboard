@@ -79,6 +79,7 @@ const Settings = () => {
           <Tab eventKey="profile" title="Edit Profile">
             <div className="lg:pl-[20px] pt-[45px] lg:pl-[30px] lg:pt-[40px] flex flex-col items-center lg:items-start lg:flex-row gap-[22px] lg:gap-[57px]">
               <ProfileImg
+                canUpload={true}
                 className={"w-[100px] h-[100px] lg:w-[91px] lg:h-[91px]"}
               ></ProfileImg>
               <Form

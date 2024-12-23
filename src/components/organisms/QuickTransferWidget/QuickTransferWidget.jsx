@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchUsers } from "../../../store/usersSlice";
 import Button from "../../atoms/Button/Button";
-import { ReactComponent as SendIcon } from "../../../assets/icons/send.svg";
 import UsersScrollableList from "../UsersScrollableList/UsersScrollableList";
 import { addTransaction } from "../../../store/recentTransactionsSlice";
 import sendSrc from "../../../assets/icons/send.png";
