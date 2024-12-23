@@ -15,4 +15,7 @@ export default defineConfig({
       "msw/node": "msw/lib/node/index.js",
     },
   },
+  build: {
+    target: "esnext", // or 'es2022'
+  },
 });
