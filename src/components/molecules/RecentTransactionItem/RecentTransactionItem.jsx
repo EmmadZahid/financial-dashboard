@@ -8,6 +8,15 @@ const RecentTransactionItem = ({ transaction }) => {
     "bg-[#E7EDFF]": transaction.type == "paypal",
     "bg-[#DCFAF8]": transaction.type == "dollar",
   });
+
+  const formatDollarAmount = (amount, showCents = false) => {
+    return new Intl.NumberFormat("en-US", {
+      style: "currency",
+      currency: "USD",
+      minimumFractionDigits: showCents ? 2 : 0,
+      maximumFractionDigits: showCents ? 2 : 0,
+    }).format(amount);
+  };
   return (
     <>
       <div className="flex items-center">
@@ -37,9 +46,13 @@ const RecentTransactionItem = ({ transaction }) => {
         </div>
         <div className="text-xs lg:text-base">
           {transaction.amount < 0 ? (
-            <span className="text-warn">-${transaction.amount * -1}</span>
+            <span className="text-warn">
+              {formatDollarAmount(transaction.amount)}
+            </span>
           ) : (
-            <span className="text-success">${transaction.amount}</span>
+            <span className="text-success">
+              {formatDollarAmount(transaction.amount)}
+            </span>
           )}
         </div>
       </div>
