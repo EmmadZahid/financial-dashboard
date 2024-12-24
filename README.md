@@ -31,7 +31,6 @@ Run `npm run build` to build the project. The build artifacts will be stored in 
 
 ## Know Issues
 
-- In responsive mode the credit card list should go all the way to the right side of screen
 - The Pie chart offset is not set. Each section is connected, not separate.
 - Credit card gradient need to be fixed exactly to figma design. Its little out right now.
 
