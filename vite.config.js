@@ -4,6 +4,7 @@ import tailwindcss from "tailwindcss";
 import svgr from "@svgr/rollup";
 
 export default defineConfig({
+  base: "/",
   plugins: [svgr({}), react()],
   css: {
     postcss: {
