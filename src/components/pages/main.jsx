@@ -90,7 +90,11 @@ const MainPage = () => {
       )}
       <div className="w-full lg:flex-1 flex flex-col h-screen">
         <Header onMenuClick={toggleSidebar}></Header>
-        <main className="flex-1 overflow-y-auto lg:bg-gray-100 px-[25px] lg:px-[40px] lg:py-[25px] justify-center flex">
+        <main
+          className={`flex-1 overflow-y-auto lg:bg-gray-100 px-[25px] lg:px-[40px] lg:py-[25px] justify-center flex ${
+            location.pathname === "/settings" ? "bg-gray" : ""
+          }`}
+        >
           <div className="w-full lg:w-[1110px]">
             <Outlet />
           </div>

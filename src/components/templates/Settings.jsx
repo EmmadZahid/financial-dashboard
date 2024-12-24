@@ -69,12 +69,12 @@ const Settings = () => {
   }, [currentUser]);
   return (
     <>
-      <div className="bg-white rounded-[25px] px-[20px] py-[22px] lg:px-[30px] lg:py-[30px]">
+      <div className="bg-white rounded-[25px] px-[20px] py-[22px] lg:px-[30px] lg:py-[30px] mt-[25px] lg:mt-0">
         <Tabs
           defaultActiveKey="profile"
           transition={false}
           id="noanim-tab-example"
-          className="mb-3 font-inter font-medium"
+          className="mb-3 font-inter font-medium flex justify-between w-full lg:justify-start"
         >
           <Tab eventKey="profile" title="Edit Profile">
             <div className="lg:pl-[20px] pt-[45px] lg:pl-[30px] lg:pt-[40px] flex flex-col items-center lg:items-start lg:flex-row gap-[22px] lg:gap-[57px]">
