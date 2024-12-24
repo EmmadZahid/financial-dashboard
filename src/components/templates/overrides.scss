@@ -32,10 +32,17 @@
 ul {
   padding: 0px;
 }
+.nav {
+  --bs-nav-link-padding-x: 0.75rem;
+}
 @media (min-width: 1024px) {
   .form-control {
     padding: 16px 20px;
     font-size: 16px;
+  }
+
+  .nav {
+    --bs-nav-link-padding-x: 1rem;
   }
 
   .nav-tabs {
