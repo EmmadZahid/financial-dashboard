@@ -21,7 +21,7 @@ const CreditCardWidget = () => {
             <Link to={"/credit-cards"}>See All</Link>
           </div>
         </div>
-        <div className="flex gap-[20px] lg:gap-[30px] overflow-x-auto">
+        <div className="flex gap-[20px] lg:gap-[30px] overflow-x-auto w-calc-100-plus-25 lg:w-full">
           {cards.map((c) => (
             <CreditCard key={c.id} card={c}></CreditCard>
           ))}

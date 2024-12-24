@@ -42,6 +42,9 @@ export default {
           800: "#343C6A",
         },
       },
+      width: {
+        "calc-100-plus-25": "calc(100% + 25px)",
+      },
     },
   },
   plugins: [],

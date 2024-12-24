@@ -51,7 +51,7 @@ const MainPage = () => {
   return (
     <div className="flex">
       <div
-        className={`flex flex-col bg-white z-10 h-screen border-r w-[250px] fixed top-0 left-0 h-full transform transition-transform duration-300 ease-in-out lg:static lg:translate-x-0 ${sidebarClasses}`}
+        className={`flex flex-col bg-white z-10 h-screen border-r min-w-[250px] w-[250px] fixed top-0 left-0 h-full transform transition-transform duration-300 ease-in-out lg:static lg:translate-x-0 ${sidebarClasses}`}
       >
         <div className="h-[100px] pl-[38px] flex items-center">
           <Link to="/dashboard" onClick={closeSidebar}>
