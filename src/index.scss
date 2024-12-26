@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 @import "bootstrap/scss/bootstrap.scss";
+@import "./overrides.scss";
 @layer base {
   html {
     font-family: "Lato";

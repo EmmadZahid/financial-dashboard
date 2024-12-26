@@ -4,7 +4,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { updateCurrentUser } from "../../store/currentUserSlice";
 import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
-import "./overrides.scss";
 import ProfileImg from "../atoms/ProfileImg/ProfileImg";
 import { Col, Form } from "react-bootstrap";
 import Button from "../atoms/Button/Button";
